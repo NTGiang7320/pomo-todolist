@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Pomo-to-list</title>
+		<link rel="icon" href="./img/to-do-list.png" type="image/x-icon" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+			integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;0,700;1,300&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+
+	<body>
+		<div class="header">
+			<a href="#"><img src="./img/post-it.png" class="img-to-do-list" /></a>
+			Pomo-to-list
+		</div>
+		<div class="wrapper">
+			<div class="container">
+				<h1>POMODORO TIMER</h1>
+				<div id="timer">25:00</div>
+				<div class="button">
+					<button id="start">Start</button>
+					<button id="reset">Reset</button>
+					<button id="break">Break</button>
+				</div>
+				<h3>Real Time</h3>
+				<div class="clock"></div>
+			</div>
+			<!-- To do list  -->
+			<div class="container2">
+				<div class="to-do-list">
+					<h3 id="to-do-list-title">To do list</h3>
+					<form action="">
+						<input type="text" class="todo-input" />
+						<button class="todo-button" type="submit">
+							<i class="fa-solid fa-plus" style="color: #ffffff"></i>
+						</button>
+						<div class="select">
+							<select name="todos" class="filter-todo">
+								<option value="all">All</option>
+								<option value="completed">Completed</option>
+								<option value="incomplete">Incompleted</option>
+							</select>
+						</div>
+					</form>
+					<div class="todo-container">
+						<ul class="todo-list"></ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="main.js"></script>
+	</body>
+</html>

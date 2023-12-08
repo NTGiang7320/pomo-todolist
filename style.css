@@ -1,0 +1,354 @@
+:root {
+  font-size: 62.5%;
+  background-color: white;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.img-to-do-list {
+  width: 35px;
+  height: 35px;
+  margin-left: 20px;
+}
+.header {
+  width: 2000px;
+  height: 50px;
+  background-color: #252b48;
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  box-shadow: 1px 1px 20px 0px black;
+  line-height: 25px;
+}
+.wrapper {
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+}
+/* pomodoro timer */
+h1 {
+  color: #252b48;
+  font-size: 80px;
+  text-align: center;
+  text-shadow: 1px 1px 1px grey;
+}
+.container {
+  width: 40%;
+  padding: 10px;
+  /* margin: 20px 20px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 15px;
+  background-color: #cee6f3;
+  box-shadow: 5px 6px 10px 5px grey;
+  margin: 30px;
+}
+#timer {
+  font-size: 150px;
+  font-weight: bold;
+  color: #f94c10;
+  text-shadow: 1px 1px 2px grey;
+}
+.button {
+  margin: 20px;
+}
+
+#start,
+#reset,
+#break {
+  z-index: 1;
+  position: relative;
+  /* color: #ff3e00; */
+  color: #252b48;
+  margin-left: 20px;
+  width: 150px;
+  height: 70px;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 8px 10px;
+  outline: none;
+  border: 4px solid black;
+  border-radius: 50px;
+  background-color: transparent;
+  overflow: hidden;
+  transition: color 0.4s ease-in-out;
+}
+
+#start::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 100%;
+  left: 100%;
+  width: 150px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #252b48;
+  transform-origin: center;
+  transform: translate3d(50%, -50%, 0) scale3d(0, 0, 0);
+  transition: transform 0.45s ease-in-out;
+}
+
+#start:hover {
+  cursor: pointer;
+  color: #f94c10;
+}
+
+#start:hover::before {
+  transform: translate3d(-50%, -50%, 0) scale3d(15, 15, 15);
+}
+
+#reset::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 100%;
+  left: 100%;
+  width: 150px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #252b48;
+  transform-origin: center;
+  transform: translate3d(50%, -50%, 0) scale3d(0, 0, 0);
+  transition: transform 0.45s ease-in-out;
+}
+
+#reset:hover {
+  cursor: pointer;
+  color: #f94c10;
+}
+
+#reset:hover::before {
+  transform: translate3d(-50%, -50%, 0) scale3d(15, 15, 15);
+}
+#break::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 100%;
+  left: 100%;
+  width: 150px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #252b48;
+  transform-origin: center;
+  transform: translate3d(50%, -50%, 0) scale3d(0, 0, 0);
+  transition: transform 0.45s ease-in-out;
+}
+
+#break:hover {
+  cursor: pointer;
+  color: #f94c10;
+}
+
+#break:hover::before {
+  transform: translate3d(-50%, -50%, 0) scale3d(15, 15, 15);
+}
+
+h3 {
+  color: #252b48;
+  font-size: 40px;
+  text-align: center;
+  text-shadow: 1px 2px 1px grey;
+}
+.clock {
+  font-size: 60px;
+  font-weight: bold;
+  color: #f94c10;
+  text-shadow: 1px 1px 2px grey;
+}
+
+/* to do list */
+.container2 {
+  width: 40%;
+  height: auto;
+  background-color: #cee6f3;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* margin: -646px 960px 20px 973px; */
+  border-radius: 15px;
+  box-shadow: 5px 6px 10px 5px grey;
+}
+form {
+  min-height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+#to-do-list-title {
+  font-size: 80px;
+  font-weight: bold;
+}
+form button {
+  color: rgb(255, 200, 0);
+  background: white;
+  cursor: pointer;
+  transition: all 0.3 ease;
+  margin-left: 1rem;
+}
+form button:hover {
+  color: white;
+  background: rgb(0, 255, 166);
+}
+.todo-input {
+  display: block;
+  width: 400px;
+  height: 50px;
+  border: 2px solid black;
+  border-radius: 20px;
+  padding: 10px;
+  font-size: 20px;
+}
+.todo-button {
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 10px;
+  background-color: #252b48;
+  color: white;
+}
+
+.fa-solid fa-plus {
+  margin-top: 0.3rem;
+  margin-left: -8px;
+}
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.todo-list {
+  min-width: 30%;
+  list-style: none;
+}
+.todo {
+  width: 400px;
+  height: 50px;
+  margin: 0.5rem;
+  padding-left: 0.5rem;
+  background: white;
+  color: black;
+  font-size: 1.7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.5s;
+  border-radius: 2rem;
+}
+.todo li {
+  flex: 1;
+}
+.trash-btn,
+.complete-btn {
+  color: white;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1.7rem;
+}
+.complete-btn {
+  background: #f94c10;
+}
+.trash-btn {
+  border-top-right-radius: 1.75rem;
+  border-bottom-right-radius: 1.75rem;
+  background: #252b48;
+}
+.todo-item {
+  padding: 0rem 0.5rem;
+}
+.fa-trash,
+.fa-check-circle {
+  pointer-events: none;
+}
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+.slide {
+  transform: translateX(10rem);
+  opacity: 0;
+}
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+}
+
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50px;
+  border: 1px solid black;
+}
+
+select {
+  color: rgb(22, 21, 19);
+  width: 14rem;
+  height: 3.5rem;
+  cursor: pointer;
+  padding: 1rem;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  background: #252b48;
+  color: white;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.select::hover::after {
+  background: #f8f0e5;
+  color: rgb(255, 200, 0);
+}
+@media only screen and (min-width: 375px) and (max-width: 1024px) {
+  .wrapper {
+    flex-direction: column;
+  }
+  h1 {
+    font-size: 40px;
+  }
+  .container {
+    width: 80%;
+    height: 40%;
+    padding: 5px;
+  }
+  #start,
+  #reset,
+  #break {
+    width: 100px;
+    height: 60px;
+    font-size: 25px;
+    margin-left: 5px;
+  }
+  #timer {
+    font-size: 90px;
+  }
+
+  .container2 {
+    width: 90%;
+    zoom: 0.7;
+  }
+}
